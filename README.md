@@ -1,10 +1,6 @@
 # Rust Expense Tracker
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
 > A simple and efficient expense tracker built with Rust.
-
-![Expense Tracker Screenshot](screenshot.png)
 
 ## Features
 
@@ -23,4 +19,4 @@
 2. Clone this repository:
 
    ```shell
-   git clone https://github.com/your-username/expense-tracker.git
+   git clone https://github.com/piyushhagarwal/rust_expense_tracker.git
