@@ -26,7 +26,7 @@ impl User{
         self.account_balance += amount;
     }
 
-    fn add_expense(&mut self, id: i32, name: String, date: String, amount: f64){
+    pub fn add_expense(&mut self, id: i32, name: String, date: String, amount: f64){
         self.transactions.push(
             Expense {
                 id,
@@ -42,19 +42,13 @@ impl User{
         let mut index = 0;
         for element in self.transactions.iter(){
             if element.id == id {
+                self.account_balance += self.transactions[index].amount;
+                self.transactions.remove(index);
                 break;
             }
             else{
                 index += 1;
             }
-        }
-        if index < self.transactions.len() {
-            self.account_balance += self.transactions[index].amount;
-            self.transactions.remove(index);
-
-        }
-        else{
-            println!("expense not found");
         }
     }
 
@@ -69,10 +63,7 @@ impl User{
                 return;
             }
         }
-        println!("Element not found")
     }
-
-
 }
 
 #[cfg(test)]
