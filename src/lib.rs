@@ -1,3 +1,5 @@
+mod filesystem;
+
 // Structure of an expense
 pub struct Expense{
     pub id:i32,
@@ -6,6 +8,7 @@ pub struct Expense{
     pub amount: f64
 }
 
+//Structure of an User
 pub struct User{
     pub user_name : String,
     pub account_balance : f64,
