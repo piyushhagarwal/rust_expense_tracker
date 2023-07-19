@@ -49,7 +49,7 @@ mod tests {
 
     #[test]
     fn test_open_file() {
-        let file_path = "test_file.txt";
+        let file_path = "test_file1.txt";
         create_file(file_path).unwrap();
         assert!(open_file(file_path).is_ok());
 
@@ -59,7 +59,7 @@ mod tests {
 
     #[test]
     fn test_read_file() {
-        let file_path = "test_file.txt";
+        let file_path = "test_file2.txt";
         let test_data = "hello world";
         create_file(file_path).unwrap();
         write_to_file(file_path, test_data).unwrap();
@@ -71,7 +71,7 @@ mod tests {
 
     #[test]
     fn test_write_to_file(){
-        let file_path = "test_file.txt";
+        let file_path = "test_file3.txt";
         let test_data = "hello world";
         create_file(file_path).unwrap();
         assert!(write_to_file(file_path, test_data).is_ok());
@@ -82,7 +82,7 @@ mod tests {
 
     #[test]
     fn test_delete_file() {
-        let file_path = "test_file.txt";
+        let file_path = "test_file4.txt";
         create_file(file_path).unwrap();
         assert!(delete_file(file_path).is_ok());
     }
