@@ -25,3 +25,13 @@
 
    ```shell
    git clone https://github.com/piyushhagarwal/rust_expense_tracker.git
+3. Navigate to the project directory:
+
+   ```shell
+   cd rust-basic-projects/project-name
+
+4. Build and run the projects:
+
+   ```shell
+   cargo build
+   cargo run
