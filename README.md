@@ -2,6 +2,11 @@
 
 > A simple and efficient expense tracker built with Rust.
 
+## Using different methods to store data
+
+1. [Storing data in stack memory](https://github.com/piyushhagarwal/rust_expense_tracker/tree/Basic-with-array)
+2. [Storing data in local files](https://github.com/piyushhagarwal/rust_expense_tracker/tree/File-system)
+
 ## Features
 
 - Track your expenses effortlessly.
