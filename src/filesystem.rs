@@ -22,6 +22,7 @@ pub fn read_file(file_path : &str) -> Result<String,io::Error> {
 pub fn write_to_file(file_path : &str, data : &str) -> Result<(),io::Error> {
     let mut file = OpenOptions::new()
         .write(true)
+        .truncate(true)
         .open(file_path)?;
     file.write_all(data.as_bytes())?;
     Ok(())
@@ -74,7 +75,7 @@ mod tests {
         let test_data = "hello world";
         create_file(file_path).unwrap();
         assert!(write_to_file(file_path, test_data).is_ok());
-        
+
         // Clean up the file after the test is finished.
         fs::remove_file(file_path).unwrap();
     }
