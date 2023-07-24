@@ -1,18 +1,35 @@
+use axum::Json;
 use serde::{Serialize, Deserialize};
 
-pub mod filesystem;
+use crate::filesystem;
 
-pub mod routes;
+//Api to create User
+#[derive(Serialize,Deserialize)]
+pub struct BodyUser{
+    user_name: String,
+    user_id: i32
+}
 
-pub async fn run(){
-    // build our application with a single route
-    let app = routes::create_routes();
+pub async fn create_user(body: Json<BodyUser>) -> Json<BodyUser>{
+    User::new(body.user_name.to_string(), body.user_id);
+    Json(BodyUser{
+        user_name: body.user_name.to_string(),
+        user_id: body.user_id
+    })
+}
 
-    // run it with hyper on localhost:3000
-    axum::Server::bind(&"0.0.0.0:3001".parse().unwrap())
-        .serve(app.into_make_service())
-        .await
-        .unwrap();
+//Api to add add balance
+#[derive(Serialize,Deserialize)]
+pub struct BodyAddBalance{
+    user_id: i32,
+    amount: f64
+}
+pub async fn add_balance(body: Json<BodyAddBalance>) -> Json<BodyAddBalance>{
+    User::add_balance(body.user_id, body.amount);
+    Json(BodyAddBalance{
+        user_id: body.user_id,
+        amount: body.amount
+    })
 }
 
 #[derive(Serialize, Deserialize, Debug)]
