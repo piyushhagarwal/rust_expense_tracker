@@ -1,5 +1,5 @@
 use axum::{Router, routing::{get, post, delete, patch}};
-mod expense;
+pub mod expense;
 
 pub fn create_routes() -> Router<>{
     Router::new()

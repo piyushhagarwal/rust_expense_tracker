@@ -1,4 +1,4 @@
-use rust_expense_tracker::{User,filesystem};
+use rust_expense_tracker::{user:: User,filesystem};
 
 #[test]
     fn test_new_user(){
