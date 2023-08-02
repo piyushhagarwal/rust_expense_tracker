@@ -1,0 +1,13 @@
+{
+  "user_name": "Piyush",
+  "user_id": 3,
+  "account_balance": 50.0,
+  "transactions": [
+    {
+      "id": 1,
+      "name": "travel",
+      "date": "24/07/2023",
+      "amount": 50.0
+    }
+  ]
+}
