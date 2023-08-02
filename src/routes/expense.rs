@@ -72,3 +72,8 @@ pub async fn update_expense(Path(user_id): Path<i32>,body: Json<Expense>) -> Jso
     Json(user_struct)
 }
 
+//Api to delete user
+pub async fn delete_user(Path(user_id): Path<i32>) {
+    let file_name = format!("{}.json",user_id);
+    filesystem::delete_file(&file_name).unwrap();
+}

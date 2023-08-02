@@ -1,13 +1,13 @@
 {
   "user_name": "Piyush",
   "user_id": 3,
-  "account_balance": 250.0,
+  "account_balance": 50.0,
   "transactions": [
     {
       "id": 1,
-      "name": "Movie",
+      "name": "travel",
       "date": "24/07/2023",
-      "amount": 100.0
+      "amount": 50.0
     }
   ]
 }
