@@ -9,7 +9,7 @@ pub fn create_routes() -> Router<>{
         .route("/:user_id/addexpense", post(expense::add_expense))
         .route("/:user_id/deleteexpense", delete(expense::delete_expense))
         .route("/:user_id/updateexpense", patch(expense::update_expense))
-        .route("/:user_id", delete(expense::delete_expense))
+        .route("/:user_id", delete(expense::delete_user))
         
 }
 
