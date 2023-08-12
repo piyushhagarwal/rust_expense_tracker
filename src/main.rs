@@ -1,11 +1,15 @@
 use rust_expense_tracker::{database, run};
+use std::env;
+use dotenv::dotenv;
 
 #[tokio::main]
 async fn main() {
-    // Define the DATABASE_URL
-    let database_url = "postgres://piyush:piyush@localhost:5432/rust";
 
-    match database::connection::establish_connection(database_url).await {
+    dotenv().ok();
+    // Define the DATABASE_URL
+    let database_url = env::var("DATABASE_URL").unwrap();
+
+    match database::connection::establish_connection(&database_url).await {
         Ok(_pool) => {
             println!("Database connected");
             run().await;

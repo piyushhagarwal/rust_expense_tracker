@@ -9,3 +9,19 @@ pub async fn establish_connection(database_url: &str) -> sqlx::Result<sqlx::Pool
 
     Ok(pool)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::env;
+    use dotenv::dotenv;
+
+    #[tokio::test]
+    async fn test_establish_connection_database(){
+        dotenv().ok();
+        let database_url = env::var("DATABASE_URL").expect("Provide the database connection url");
+        assert!(establish_connection(&database_url).await.is_ok());
+    }
+
+}
+
