@@ -1,5 +1,5 @@
 mod handlers;
-mod functions;
+pub mod functions;
 use axum::{Router, routing::{post, patch, delete, get}};
 use handlers::{add_balance,get_expenses,get_single_expense,add_expense,delete_expense,update_expense};
 

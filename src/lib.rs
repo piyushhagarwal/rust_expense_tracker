@@ -1,5 +1,5 @@
 pub mod database;
-mod api;
+pub mod api;
 
 use api::{users::users_routes, expenses::expenses_routes};
 
