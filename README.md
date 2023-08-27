@@ -6,6 +6,7 @@
 
 1. [Storing data in stack memory](https://github.com/piyushhagarwal/rust_expense_tracker/tree/Basic-with-array)
 2. [Storing data in local files and created api for the same](https://github.com/piyushhagarwal/rust_expense_tracker/tree/File-system)
+3. [Storing data in Postgres SQL database](https://github.com/piyushhagarwal/rust_expense_tracker/tree/Database)
 
 ## Features
 
